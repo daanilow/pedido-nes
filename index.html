@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Você aceita namorar comigo?</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
-    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="container">
-        <div id="image-container"></div> <!-- Container das imagens -->
+        <div id="image-container"></div>
+
         <div id="text-container">
-            <div id="question">Você aceita namorar comigo?</div> <!-- Pergunta -->
+            <div id="question">Você aceita namorar comigo?</div>
+
             <div id="options">
-                <button id="yes-button" onclick="selectOption('yes')">Sim</button> <!-- Botão Sim -->
-                <button id="no-button" onclick="selectOption('no')">Não</button> <!-- Botão Não -->
+                <button id="yes-button" onclick="selectOption('yes')">Sim</button>
+                <button id="no-button" onclick="selectOption('no')">Não</button>
+            </div>
+
+            <!-- Caixa da carta -->
+            <div id="letter-box" style="display:none;">
+                <div id="letter"></div>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script> <!-- Link para o script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

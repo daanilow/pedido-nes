@@ -33,8 +33,17 @@ button {
     margin: 0 10px; /* Set margin around buttons */
     font-size: 26px; /* Set font size for buttons */
     font-family: 'Sacramento', cursive; /* Apply Sacramento font to the options */
-    background-color: #FB607F; /* Set button background color */
+    background-color: #9e6899; /* Set button background color */
     color: white; /* Set text color to white */
     border: none; /* Remove button border */
+    border-radius: 30px;
     cursor: pointer; /* Set cursor to pointer on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+    background-color: #5b3765;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
 }
