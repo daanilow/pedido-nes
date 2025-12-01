@@ -162,43 +162,53 @@ function typeWriter(text, i) {
 }
 
 function showLetter() {
-  const letterText = `
-Meu amor,
+  const letterText = `Meu amor,
 
-Desde o primeiro momento em que você entrou na minha vida eu sabia que era com você que eu queria estar até o final
-você me traz forças, alegria, você me mostrou o que é amar e o que é ser amado verdadeiramente.
-Você é a luz da minha vida e é a pessoa que eu quero estar ao lado pelo resto da minha vida, é a mulher que eu
-quero ver entrando na igreja, é a mulher que eu quero para ser minha companheira para sempre, você a cada dia me mostra
-que é com você que eu quero passar meus dias, crescer, ter uma família, construir uma vida, você é a definição de amor, 
-a definição de companheirismo, lealdade, amizade.
-Quando eu estou conversando com você o mundo fica mais leve, alegre, sereno, as coisas parecem mais fáceis, você é o amor
-da minha vida e eu não tenho dúvidas que é com você que eu vou viver pelo resto da minha vida.
-Eu não seria a pessoa que eu sou hoje sem você, e eu não estaria aqui se não fosse por você, você é a luz da minha vida,
-é a razão de eu ter esperado até hoje, de todos os dias ter continuado pensando em você, não caberia nesse site as palavras
-para descrever o quanto eu te amo, o quanto eu sou grato a você o quanto eu te acho tudo, é por isso que eu repito diariamente
-você é linda, maravilhosa, perfeita, espetacular, você é tudo isso, você é meu amor, minha princesa, minha gatinha, minha gostosa
-tudo isso, a distância só me mostrou mais isso e só me fez ter mais vontade de estar com você, eu vou fazer de tudo para que nós fiquemos
-juntos para que eu possa te abraçar te beijar te confortar, eu sempre estarei aqui por você nos momentos bons, nos momentos ruins,
-eu te amo com todas as forças do fundo do meu coração, VOCÊ É A MULHER DA MINHA VIDA e eu vou continuar dizendo isso
-para sempre, obrigado por ser o amor da minha vida e estar comigo durante todo este tempo, espero que através desse pequeno texto eu consiga
-demonstrar o 1% do tanto que eu te amo e te quero na minha vida, obrigado por ser você por ser esse pedacinho de gentileza, amor e felicidade
-na minha vida, eu te quero a todo instante para sempre, obrigado por me fazer amar, por me mostrar o que é amor, o que é ser amado, você me fez e faz
-a pessoa mais feliz que eu poderia ser, eu não poderia pedir alguém melhor, você é tudo para mim, obrigado amor da minha vida.
-TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO
+Desde o primeiro momento em que você entrou na minha vida eu sabia que era com você que eu queria estar até o final.
+Você me traz forças, alegria, você me mostrou o que é amar e o que é ser amado verdadeiramente.
+Você é a luz da minha vida e é a pessoa que eu quero estar ao lado pelo resto da minha vida, é a mulher que eu quero ver
+entrando na igreja, é a mulher que eu quero para ser minha companheira para sempre. A cada dia você me mostra que é com
+você que eu quero passar meus dias, crescer, ter uma família, construir uma vida. Você é a definição de amor, de
+companheirismo, lealdade e amizade.
 
-❤️
-  `;
+Quando eu estou conversando com você o mundo fica mais leve, alegre, sereno. As coisas parecem mais fáceis. Você é o amor
+da minha vida e eu não tenho dúvidas de que é com você que eu vou viver pelo resto da minha vida.
+Eu não seria a pessoa que eu sou hoje sem você, e eu não estaria aqui se não fosse por você. Você é a luz da minha vida,
+é a razão de eu ter esperado até hoje, de todos os dias ter continuado pensando em você.
 
+Não caberia neste site as palavras para descrever o quanto eu te amo, o quanto eu sou grato a você, o quanto eu te acho tudo!
+Por isso eu repito diariamente: você é linda, maravilhosa, perfeita, espetacular. Você é minha princesa, minha gatinha,
+minha gostosa, meu amor. A distância só me mostrou mais isso, só aumentou minha vontade de estar com você.
+
+Eu vou fazer de tudo para que nós fiquemos juntos, para que eu possa te abraçar, te beijar e te confortar. Eu sempre estarei
+aqui por você, nos momentos bons e nos ruins. Eu te amo com todas as forças do fundo do meu coração. VOCÊ É A MULHER DA MINHA VIDA
+e eu vou continuar dizendo isso para sempre.
+
+Obrigado por ser o amor da minha vida e estar comigo durante todo este tempo. Espero que através desse pequeno texto eu consiga
+mostrar pelo menos 1% do tanto que eu te amo e te quero na minha vida. Obrigado por ser esse pedacinho de gentileza, amor e felicidade
+na minha vida. Eu te quero a todo instante, para sempre.
+
+Obrigado por me fazer amar, por me mostrar o que é amor, o que é ser amado. Você me faz a pessoa mais feliz que eu poderia ser.
+Eu não poderia pedir alguém melhor. Você é tudo para mim.
+
+TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO TE AMO ❤️`;
+
+  // Mostra a caixa da carta
+  const box = document.getElementById("letter-box");
+  box.style.display = "block";
+
+  // Estilo corrigido
   const letterBox = document.getElementById("letter");
-  letterBox.style.display = "block";
   letterBox.style.whiteSpace = "pre-line";
   letterBox.style.fontSize = "20px";
   letterBox.style.fontFamily = "Georgia, serif";
-  letterBox.style.marginTop = "20px";
-  letterBox.style.width = "80%";
-  letterBox.style.maxWidth = "700px";
-  letterBox.style.lineHeight = "1.5";
+  letterBox.style.margin = "20px auto";
+  letterBox.style.width = "100%";
+  letterBox.style.maxWidth = "600px";
+  letterBox.style.lineHeight = "1.6";
+  letterBox.style.overflowWrap = "break-word";
 
+  // Limpa e inicia a digitação
   letterBox.innerHTML = "";
   typeWriter(letterText, 0);
 }
