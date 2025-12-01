@@ -3,23 +3,23 @@
 // Function to handle button click events
 function selectOption(option) {
     // Check which option was clicked
-    if (option === 'sim') {
+    if (option === 'yes') {
         // Flash rainbow colors
         flashRainbowColors(function() {
-            document.getElementById('pergunta').style.display = 'none'; // Hide the question
+            document.getElementById('question').style.display = 'none'; // Hide the question
             displayCatHeart(); // Display the cat-heart.gif
         });
-    } else if (option === 'nao') {
+    } else if (option === 'no') {
         // Change text on the "No" button to "You sure?"
-        document.getElementById('nao-button').innerText = 'Você tem certeza?'; 
+        document.getElementById('no-button').innerText = 'You sure?'; 
         // Increase font size of "Yes" button
-        var yesButton = document.getElementById('sim-button');
+        var yesButton = document.getElementById('yes-button');
         var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
         var newSize = parseFloat(currentFontSize) * 2; // Increase font size by  * 2px
         yesButton.style.fontSize = newSize + 'px';
     } else {
         // If neither "Yes" nor "No" was clicked, show an alert message
-        alert('Resposta errada!');
+        alert('Invalid option!');
     }
 }
 
